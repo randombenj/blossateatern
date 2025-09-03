@@ -207,6 +207,138 @@
             margin-bottom: 20px;
         }
 
+        /* Previous Plays Gallery Section */
+        #gallery, #gallery2 {
+            padding: 40px 20px;
+            text-align: center;
+        }
+
+        .gallery-title {
+            font-size: 2.2em;
+            color: #85002c;
+            margin-bottom: 30px;
+        }
+
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 15px;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .gallery-item {
+            cursor: pointer;
+            border-radius: 8px;
+            overflow: hidden;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .gallery-item:hover {
+            transform: scale(1.05);
+            box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+        }
+
+        .gallery-item img {
+            width: 100%;
+            height: 150px;
+            object-fit: cover;
+            display: block;
+        }
+
+        /* Modal/Lightbox styles */
+        .lightbox {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.9);
+            z-index: 1000;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .lightbox.active {
+            display: flex;
+        }
+
+        .lightbox-content {
+            position: relative;
+            max-width: 90vw;
+            max-height: 90vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .lightbox-image {
+            max-width: 90vw;
+            max-height: 90vh;
+            width: auto;
+            height: auto;
+            object-fit: contain;
+        }
+
+        .lightbox-close {
+            position: absolute;
+            top: -40px;
+            right: 0;
+            color: white;
+            font-size: 30px;
+            cursor: pointer;
+            background: none;
+            border: none;
+        }
+
+        .lightbox-nav {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            background: rgba(255, 255, 255, 0.1);
+            color: white;
+            border: none;
+            font-size: 24px;
+            padding: 10px 15px;
+            cursor: pointer;
+            border-radius: 4px;
+            transition: background-color 0.3s ease;
+        }
+
+        .lightbox-nav:hover {
+            background: rgba(255, 255, 255, 0.2);
+        }
+
+        .lightbox-prev {
+            left: -60px;
+        }
+
+        .lightbox-next {
+            right: -60px;
+        }
+
+        /* Mobile adjustments for lightbox */
+        @media (max-width: 768px) {
+            .lightbox-nav {
+                font-size: 20px;
+                padding: 8px 12px;
+            }
+
+            .lightbox-prev {
+                left: 10px;
+            }
+
+            .lightbox-next {
+                right: 10px;
+            }
+
+            .lightbox-close {
+                top: 10px;
+                right: 10px;
+            }
+        }
+
         /* Footer */
         footer {
             text-align: center;
@@ -248,6 +380,88 @@
                 <img src="theater-group.jpeg" alt="Gruppfoto av Blossateatern">
                 <p>Blossateatern har varit en aktiv del av Uppsalas kulturliv i fyra år. Vi strävar efter att skapa engagerande och tankeväckande föreställningar för alla åldrar.</p>
             </section>
+
+            <section id="gallery">
+                <h2 class="gallery-title">Tidigare Föreställningar</h2>
+
+                <h2>Samtal</h2>
+
+                <p>
+                Etables-sur-mer ligger vackert beläget vid atlantkusten i regionen Bretagne i sydvästra Frankrike. Hit har den irländska författaren Melissa och hennes make
+                Nick tagit sin tillflykt under sommaren för att Nick ska vila upp sig och Melissa ska jobba på sin nästa bok. Under en vecka i augusti har
+                Melissa bjudit in litteraturstudenterna Frances och Bobbi…
+                Samtal är ett relationsdrama i två akter som berör alla de faktorer som påverkar relationer människor emellan: makt, status, klass och kärlek.
+                </p>
+
+                <div class="gallery-grid">
+                    <div class="gallery-item" data-gallery="0" data-index="0">
+                        <img src="play1/1.jpeg" alt="Föreställning 1">
+                    </div>
+                    <div class="gallery-item" data-gallery="0" data-index="1">
+                        <img src="play1/2.jpeg" alt="Föreställning 2">
+                    </div>
+                    <div class="gallery-item" data-gallery="0" data-index="2">
+                        <img src="play1/3.jpeg" alt="Föreställning 3">
+                    </div>
+                    <div class="gallery-item" data-gallery="0" data-index="3">
+                        <img src="play1/4.jpeg" alt="Föreställning 4">
+                    </div>
+                    <div class="gallery-item" data-gallery="0" data-index="4">
+                        <img src="play1/5.jpeg" alt="Föreställning 5">
+                    </div>
+                    <div class="gallery-item" data-gallery="0" data-index="5">
+                        <img src="play1/6.jpeg" alt="Föreställning 6">
+                    </div>
+                    <div class="gallery-item" data-gallery="0" data-index="6">
+                        <img src="play1/7.jpeg" alt="Föreställning 7">
+                    </div>
+                </div>
+            </section>
+
+            <section id="gallery2">
+                <h2>Påsk</h2>
+
+                <p>
+                Våren låter vänta på sig hemma hos familjen Heyst. Efter att Herr Heyst anhållits och fängslats, anklagad för förskingring,
+                så är skuggorna många över Fru Heyst, hennes son Elis och Kristina, Elis trolovade. Skuggan utav den själssjuka lillasyster
+                Eleonora som sitter på hospital, skuggan av skammen över faderns brottsliga handling, och kanske framför allt skuggan av Lindqvist,
+                fordringsägaren, som närsomhelst kan komma för att begära igen sin skuld…
+                Påsk av August Strindberg sattes upp för första gången 1901 och räknas inte till hans kändaste pjäser,
+                men kanske till hans mest omtyckta. Under tre akter, som utspelar sig under Skärtorsdag, Långfredag och Påskafton,
+                får vi följa familjen Heysts lidande och prövningar.
+                </p>
+
+                <div class="gallery-grid">
+                    <div class="gallery-item" data-gallery="1" data-index="0">
+                        <img src="play2/1.jpeg" alt="Förödelsessdagsbarnet 1">
+                    </div>
+                    <div class="gallery-item" data-gallery="1" data-index="1">
+                        <img src="play2/2.jpeg" alt="Förödelsessdagsbarnet 2">
+                    </div>
+                    <div class="gallery-item" data-gallery="1" data-index="2">
+                        <img src="play2/3.jpeg" alt="Förödelsessdagsbarnet 3">
+                    </div>
+                    <div class="gallery-item" data-gallery="1" data-index="3">
+                        <img src="play2/4.jpeg" alt="Förödelsessdagsbarnet 4">
+                    </div>
+                    <div class="gallery-item" data-gallery="1" data-index="4">
+                        <img src="play2/5.jpeg" alt="Förödelsessdagsbarnet 5">
+                    </div>
+                    <div class="gallery-item" data-gallery="1" data-index="5">
+                        <img src="play2/6.jpeg" alt="Förödelsessdagsbarnet 6">
+                    </div>
+                </div>
+            </section>
+
+            <!-- Lightbox Modal -->
+            <div class="lightbox" id="lightbox">
+                <div class="lightbox-content">
+                    <button class="lightbox-close" id="lightbox-close">&times;</button>
+                    <button class="lightbox-nav lightbox-prev" id="lightbox-prev">&#8249;</button>
+                    <img class="lightbox-image" id="lightbox-image" src="" alt="">
+                    <button class="lightbox-nav lightbox-next" id="lightbox-next">&#8250;</button>
+                </div>
+            </div>
         </main>
     </div>
 
@@ -258,6 +472,96 @@
     <script>
         // Set current year in copyright
         document.getElementById('current-year').textContent = new Date().getFullYear();
+
+        // Gallery functionality
+        const galleries = [
+            [
+                'play1/1.jpeg',
+                'play1/2.jpeg',
+                'play1/3.jpeg',
+                'play1/4.jpeg',
+                'play1/5.jpeg',
+                'play1/6.jpeg',
+                'play1/7.jpeg'
+            ],
+            [
+                'play2/1.jpeg',
+                'play2/2.jpeg',
+                'play2/3.jpeg',
+                'play2/4.jpeg',
+                'play2/5.jpeg',
+                'play2/6.jpeg'
+            ]
+        ];
+
+        let currentGallery = 0;
+        let currentImageIndex = 0;
+
+        // Gallery elements
+        const galleryItems = document.querySelectorAll('.gallery-item');
+        const lightbox = document.getElementById('lightbox');
+        const lightboxImage = document.getElementById('lightbox-image');
+        const lightboxClose = document.getElementById('lightbox-close');
+        const lightboxPrev = document.getElementById('lightbox-prev');
+        const lightboxNext = document.getElementById('lightbox-next');
+
+        // Open lightbox when clicking on gallery item
+        galleryItems.forEach(item => {
+            item.addEventListener('click', () => {
+                currentGallery = parseInt(item.dataset.gallery);
+                currentImageIndex = parseInt(item.dataset.index);
+                showImage(currentImageIndex);
+                lightbox.classList.add('active');
+            });
+        });
+
+        // Close lightbox
+        lightboxClose.addEventListener('click', closeLightbox);
+        lightbox.addEventListener('click', (e) => {
+            if (e.target === lightbox) {
+                closeLightbox();
+            }
+        });
+
+        // Navigation
+        lightboxPrev.addEventListener('click', () => {
+            const currentGalleryImages = galleries[currentGallery];
+            currentImageIndex = (currentImageIndex - 1 + currentGalleryImages.length) % currentGalleryImages.length;
+            showImage(currentImageIndex);
+        });
+
+        lightboxNext.addEventListener('click', () => {
+            const currentGalleryImages = galleries[currentGallery];
+            currentImageIndex = (currentImageIndex + 1) % currentGalleryImages.length;
+            showImage(currentImageIndex);
+        });
+
+        // Keyboard navigation
+        document.addEventListener('keydown', (e) => {
+            if (!lightbox.classList.contains('active')) return;
+
+            if (e.key === 'Escape') {
+                closeLightbox();
+            } else if (e.key === 'ArrowLeft') {
+                const currentGalleryImages = galleries[currentGallery];
+                currentImageIndex = (currentImageIndex - 1 + currentGalleryImages.length) % currentGalleryImages.length;
+                showImage(currentImageIndex);
+            } else if (e.key === 'ArrowRight') {
+                const currentGalleryImages = galleries[currentGallery];
+                currentImageIndex = (currentImageIndex + 1) % currentGalleryImages.length;
+                showImage(currentImageIndex);
+            }
+        });
+
+        function showImage(index) {
+            const currentGalleryImages = galleries[currentGallery];
+            lightboxImage.src = currentGalleryImages[index];
+            lightboxImage.alt = `Föreställning ${index + 1}`;
+        }
+
+        function closeLightbox() {
+            lightbox.classList.remove('active');
+        }
     </script>
 
     <!-- <script>
