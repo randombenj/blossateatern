@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BLOSSATEATERN</title>
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+
+    <!-- SEO Meta Tags -->
+    <meta name="description" content="Välkommen att fira Gertruds 75-årsdag med amatörteatergruppen Blossateatern den 27 september kl 19:00 på Teater Blanca i Uppsala. Föreställningen 'Förödelsessdagsbarnet' - en kväll med scenkonst och gemenskap.">
+    <meta name="keywords" content="Blossateatern, Uppsala, amatörteater, scenkonst, Gertrud 75 år, Teater Blanca, födelsedag, teaterföreställning, kulturliv Uppsala, Förödelsessdagsbarnet">
+    <meta name="author" content="Blossateatern">
+    <meta name="robots" content="index, follow">
+
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Event",
+        "name": "Förödelsessdagsbarnet - Gertrud fyller 75 år",
+        "description": "Fira med Blossateatern när Gertrud fyller 75 år. Föreställningen 'Förödelsessdagsbarnet' - en kväll med scenkonst och gemenskap.",
+        "startDate": "2025-09-27T19:00:00+02:00",
+        "workPerformed": {
+            "@type": "CreativeWork",
+            "name": "Förödelsessdagsbarnet"
+        },
+        "location": {
+            "@type": "Place",
+            "name": "Teater Blanca",
+            "address": {
+                "@type": "PostalAddress",
+                "addressLocality": "Uppsala",
+                "addressCountry": "SE"
+            }
+        },
+        "organizer": {
+            "@type": "Organization",
+            "name": "Blossateatern",
+            "description": "En amatörteatergrupp från Uppsala med en stor passion för scenkonst och gemenskap."
+        },
+        "performer": {
+            "@type": "Person",
+            "name": "Blossateatern"
+        },
+        "image": "cover.png"
+    }
+    </script>
+    <style>
+        /* General Styling */
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #fdfdfc;
+            color: #333;
+            line-height: 1.6;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        /* Header */
+        header {
+            text-align: center;
+            padding-top: 40px;
+        }
+
+        .header-content {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 15px;
+            flex-wrap: wrap;
+        }
+
+        .logo {
+            height: 60px;
+            width: auto;
+            margin-right: 10px;
+            margin-bottom: -22px;
+        }
+
+        header h1 {
+            font-size: 2.8em;
+            color: #85002c; /* A warm, earthy brown */
+            margin: 0;
+            font-weight: normal;
+        }
+
+        header p {
+            font-size: 1.2em;
+            color: #555;
+        }
+
+        /* Invitation Section */
+        .invitation-section {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 40px;
+            padding: 50px 20px;
+            min-height: 450px;
+            flex-wrap: wrap; /* Allows items to wrap on smaller screens */
+        }
+
+        /* The Birthday Card */
+        .birthday-card {
+            width: 50%;
+            min-width: 400px;
+            height: 600px;
+        }
+
+        /* Mobile responsive adjustments */
+        @media (max-width: 768px) {
+            .birthday-card {
+                width: 100%;
+                min-width: unset;
+                max-width: 100%;
+                /* height: 400px; */
+            }
+
+            .invitation-section {
+                padding: 20px 10px;
+                gap: 20px;
+            }
+
+            #about img {
+                width: 100%;
+                height: 380px;
+                object-fit: cover;
+                object-position: center;
+            }
+        }
+
+        .card-inner {
+            position: relative;
+            width: 100%;
+            height: 100%;
+            /* transform-style: preserve-3d;
+            transition: transform 0.8s cubic-bezier(0.68, -0.55, 0.27, 1.55);
+            transform-origin: left center; */
+        }
+
+        /* When the card is clicked, the .is-open class is added */
+        .birthday-card.is-open .card-inner {
+            transform: rotateY(-180deg);
+        }
+
+        .card-front, .card-back {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            backface-visibility: hidden; /* Hides the back of the element when it's turned away */
+            /* border-radius: 8px; */
+            /* box-shadow: 0 4px 15px rgba(0,0,0,0.2); */
+            overflow: hidden; /* Ensures image fits within the rounded corners */
+        }
+
+        .card-back {
+            background-color: #fff; /* Fallback color */
+            transform: rotateY(180deg); /* Pre-rotates the back side */
+        }
+
+        .card-front img, .card-back img {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+        }
+
+        /* Invitation Text */
+        .invitation-text {
+            max-width: 350px;
+            text-align: center;
+        }
+
+        .invitation-text h2 {
+            font-size: 1.8em;
+            /* color: #D2691E; A festive, darker orange */
+            margin-bottom: 15px;
+        }
+
+        .invitation-text p {
+            font-size: 1.2em;
+        }
+
+        /* About Section */
+        #about {
+            padding: 40px 20px;
+            /* background-color: #f8f8f8; */
+            text-align: center;
+            border-radius: 4px;
+        }
+
+        #about h2 {
+            font-size: 2.2em;
+            color: #85002c;
+            margin-bottom: 30px;
+        }
+
+        #about img {
+            max-width: 100%;
+            /* height: auto; */
+            margin-bottom: 20px;
+        }
+
+        /* Footer */
+        footer {
+            text-align: center;
+            padding: 20px;
+            font-size: 0.9em;
+            color: #777;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <header>
+            <div class="header-content">
+                <img src="logo.png" alt="Blossateatern Logo" class="logo">
+                <h1><b>BLOSSA</b>TEATERN</h1>
+            </div>
+            <p>En amatörteatergrupp från Uppsala med en stor passion för scenkonst och gemenskap.</p>
+        </header>
+
+        <main>
+            <div class="invitation-section">
+                <div class="birthday-card" id="birthdayCard">
+                    <div class="card-inner">
+                        <div class="card-front">
+                            <img src="cover.png" alt="Framsida av inbjudningskort">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="invitation-text">
+                    <h2>Gertrud fyller 75 år!</h2>
+                    <p>Du är varmt välkommen att fira med henne den <strong>27 september kl 19:00</strong> på <strong>Teater Blanca</strong>!</p>
+                </div>
+            </div>
+
+            <section id="about">
+                <h2>Om Oss</h2>
+                <img src="theater-group.jpeg" alt="Gruppfoto av Blossateatern">
+                <p>Blossateatern har varit en aktiv del av Uppsalas kulturliv i fyra år. Vi strävar efter att skapa engagerande och tankeväckande föreställningar för alla åldrar.</p>
+            </section>
+        </main>
+    </div>
+
+    <footer>
+        <p>&copy; <span id="current-year"></span> Blossateatern</p>
+    </footer>
+
+    <script>
+        // Set current year in copyright
+        document.getElementById('current-year').textContent = new Date().getFullYear();
+    </script>
+
+    <!-- <script>
+        // JavaScript to make the card open on click
+        const card = document.getElementById('birthdayCard');
+
+        card.addEventListener('click', function() {
+            card.classList.toggle('is-open');
+        });
+    </script> -->
+
+</body>
+</html>
