@@ -9,8 +9,8 @@
     <link rel="icon" type="image/x-icon" href="favicon.ico">
 
     <!-- SEO Meta Tags -->
-    <meta name="description" content="Välkommen att fira Gertruds 75-årsdag med amatörteatergruppen Blossateatern den 27 september kl 19:00 på Teater Blanca i Uppsala. Föreställningen 'Förödelsessdagsbarnet' - en kväll med scenkonst och gemenskap.">
-    <meta name="keywords" content="Blossateatern, Uppsala, amatörteater, scenkonst, Gertrud 75 år, Teater Blanca, födelsedag, teaterföreställning, kulturliv Uppsala, Förödelsessdagsbarnet">
+    <meta name="description" content="Fira Gertruds 75-årsdag med Blossateatern på Teater Blanca i Uppsala! Tre besökstider: 27/9 kl 15:00 & 19:00, 28/9 kl 16:00. Anmälan via Facebook event. Amatörteater med passion för scenkonst.">
+    <meta name="keywords" content="Blossateatern, Uppsala, amatörteater, scenkonst, Gertrud 75 år, Teater Blanca, födelsedag, teaterföreställning, kulturliv Uppsala, Facebook event, anmälan, föreställningstider">
     <meta name="author" content="Blossateatern">
     <meta name="robots" content="index, follow">
 
@@ -18,13 +18,29 @@
     {
         "@context": "https://schema.org",
         "@type": "Event",
-        "name": "Förödelsessdagsbarnet - Gertrud fyller 75 år",
-        "description": "Fira med Blossateatern när Gertrud fyller 75 år. Föreställningen 'Förödelsessdagsbarnet' - en kväll med scenkonst och gemenskap.",
-        "startDate": "2025-09-27T19:00:00+02:00",
-        "workPerformed": {
-            "@type": "CreativeWork",
-            "name": "Förödelsessdagsbarnet"
-        },
+        "name": "Gertrud fyller 75 år - Blossateatern",
+        "description": "Fira med Blossateatern när Gertrud fyller 75 år. Tre besökstider på Teater Blanca i Uppsala. Anmälan via Facebook event.",
+        "startDate": "2025-09-27T15:00:00+02:00",
+        "endDate": "2025-09-28T18:00:00+02:00",
+        "eventSchedule": [
+            {
+                "@type": "Schedule",
+                "startDate": "2025-09-27T15:00:00+02:00",
+                "endDate": "2025-09-27T17:00:00+02:00"
+            },
+            {
+                "@type": "Schedule",
+                "startDate": "2025-09-27T19:00:00+02:00",
+                "endDate": "2025-09-27T21:00:00+02:00"
+            },
+            {
+                "@type": "Schedule",
+                "startDate": "2025-09-28T16:00:00+02:00",
+                "endDate": "2025-09-28T18:00:00+02:00"
+            }
+        ],
+        "eventStatus": "https://schema.org/EventScheduled",
+        "eventAttendanceMode": "https://schema.org/OfflineEventAttendanceMode",
         "location": {
             "@type": "Place",
             "name": "Teater Blanca",
@@ -37,13 +53,23 @@
         "organizer": {
             "@type": "Organization",
             "name": "Blossateatern",
-            "description": "En amatörteatergrupp från Uppsala med en stor passion för scenkonst och gemenskap."
+            "description": "En amatörteatergrupp från Uppsala med en stor passion för scenkonst och gemenskap.",
+            "url": "https://www.facebook.com/events/s/blossateatern-ger-forodelsedag/1525441338814631/"
         },
         "performer": {
             "@type": "Person",
             "name": "Blossateatern"
         },
-        "image": "cover.png"
+        "image": "cover.png",
+        "offers": {
+            "@type": "Offer",
+            "price": "120",
+            "priceCurrency": "SEK",
+            "availability": "https://schema.org/InStock",
+            "url": "https://www.facebook.com/events/s/blossateatern-ger-forodelsedag/1525441338814631/"
+        },
+        "isAccessibleForFree": true,
+        "url": "https://www.facebook.com/events/s/blossateatern-ger-forodelsedag/1525441338814631/"
     }
     </script>
     <style>
@@ -55,6 +81,11 @@
             background-color: #fdfdfc;
             color: #333;
             line-height: 1.6;
+        }
+
+        a {
+            color: #85002c;
+            text-decoration: none;
         }
 
         .container {
@@ -377,7 +408,26 @@
 
                 <div class="invitation-text">
                     <h2>Gertrud fyller 75 år!</h2>
-                    <p>Du är varmt välkommen att fira med henne den <strong>27 september kl 19:00</strong> på <strong>Teater Blanca</strong>!</p>
+                    <p>Du är varmt välkommen att fira med henne på <strong> <a href="https://maps.app.goo.gl/TzcQe3HRkLE66Upf6" target="_blank">Teater Blanca</a></strong>!</p>
+
+                    <h3>Besökstider:</h3>
+                    <ul style="text-align: left; display: inline-block;">
+                        <li><strong>27 september 2025 kl. 15:00</strong></li>
+                        <li><strong>27 september 2025 kl. 19:00</strong></li>
+                        <li><strong>28 september 2025 kl. 16:00</strong></li>
+                    </ul>
+
+                    <h3>Anmälan:</h3>
+                    <p>
+                        <a href="https://www.facebook.com/events/s/blossateatern-ger-forodelsedag/1525441338814631/"
+                           target="_blank"
+                           rel="noopener noreferrer"
+                           style="color: #85002c; font-weight: bold; text-decoration: none; border: 2px solid #85002c; padding: 10px 20px; border-radius: 5px; display: inline-block; margin-top: 10px; transition: background-color 0.3s ease;"
+                           onmouseover="this.style.backgroundColor='#85002c'; this.style.color='white';"
+                           onmouseout="this.style.backgroundColor='transparent'; this.style.color='#85002c';">
+                           Anmäl dig via Facebook Event
+                        </a>
+                    </p>
                 </div>
             </div>
 
@@ -401,25 +451,25 @@
 
                 <div class="gallery-grid">
                     <div class="gallery-item" data-gallery="0" data-index="0">
-                        <img src="play1/1.jpeg" alt="Föreställning 1">
+                        <img src="play1/1.jpeg" alt="Samtal 1">
                     </div>
                     <div class="gallery-item" data-gallery="0" data-index="1">
-                        <img src="play1/2.jpeg" alt="Föreställning 2">
+                        <img src="play1/2.jpeg" alt="Samtal 2">
                     </div>
                     <div class="gallery-item" data-gallery="0" data-index="2">
-                        <img src="play1/3.jpeg" alt="Föreställning 3">
+                        <img src="play1/3.jpeg" alt="Samtal 3">
                     </div>
                     <!-- <div class="gallery-item" data-gallery="0" data-index="3">
                         <img src="play1/4.jpeg" alt="Föreställning 4">
                     </div> -->
                     <div class="gallery-item" data-gallery="0" data-index="4">
-                        <img src="play1/5.jpeg" alt="Föreställning 5">
+                        <img src="play1/5.jpeg" alt="Samtal 5">
                     </div>
                     <div class="gallery-item" data-gallery="0" data-index="5">
-                        <img src="play1/6.jpeg" alt="Föreställning 6">
+                        <img src="play1/6.jpeg" alt="Samtal 6">
                     </div>
                     <div class="gallery-item" data-gallery="0" data-index="6">
-                        <img src="play1/7.jpeg" alt="Föreställning 7">
+                        <img src="play1/7.jpeg" alt="Samtal 7">
                     </div>
                 </div>
             </section>
@@ -439,22 +489,22 @@
 
                 <div class="gallery-grid">
                     <div class="gallery-item" data-gallery="1" data-index="0">
-                        <img src="play2/1.jpeg" alt="Förödelsessdagsbarnet 1">
+                        <img src="play2/1.jpeg" alt="Påsk 1">
                     </div>
                     <div class="gallery-item" data-gallery="1" data-index="1">
-                        <img src="play2/2.jpeg" alt="Förödelsessdagsbarnet 2">
+                        <img src="play2/2.jpeg" alt="Påsk 2">
                     </div>
                     <div class="gallery-item" data-gallery="1" data-index="2">
-                        <img src="play2/3.jpeg" alt="Förödelsessdagsbarnet 3">
+                        <img src="play2/3.jpeg" alt="Påsk 3">
                     </div>
                     <div class="gallery-item" data-gallery="1" data-index="3">
-                        <img src="play2/4.jpeg" alt="Förödelsessdagsbarnet 4">
+                        <img src="play2/4.jpeg" alt="Påsk 4">
                     </div>
                     <div class="gallery-item" data-gallery="1" data-index="4">
-                        <img src="play2/5.jpeg" alt="Förödelsessdagsbarnet 5">
+                        <img src="play2/5.jpeg" alt="Påsk 5">
                     </div>
                     <div class="gallery-item" data-gallery="1" data-index="5">
-                        <img src="play2/6.jpeg" alt="Förödelsessdagsbarnet 6">
+                        <img src="play2/6.jpeg" alt="Påsk 6">
                     </div>
                 </div>
             </section>
