@@ -9,76 +9,42 @@
     <link rel="icon" type="image/x-icon" href="favicon.ico">
 
     <!-- SEO Meta Tags -->
-    <meta name="description" content="Fira Gertruds 75-årsdag med Blossateatern på Teater Blanca i Uppsala! Tre besökstider: 27/9 kl 15:00 & 19:00, 28/9 kl 16:00. Anmälan via Facebook event. Amatörteater med passion för scenkonst.">
-    <meta name="keywords" content="Blossateatern, Uppsala, amatörteater, scenkonst, Gertrud 75 år, Teater Blanca, födelsedag, teaterföreställning, kulturliv Uppsala, Facebook event, anmälan, föreställningstider">
+    <meta name="description" content="Amatörteater med passion för scenkonst.">
+    <meta name="keywords" content="Blossateatern, Uppsala, amatörteater, scenkonst, Teater Blanca, födelsedag, teaterföreställning, kulturliv Uppsala, Facebook event">
     <meta name="author" content="Blossateatern">
     <meta name="robots" content="index, follow">
 
-    <script type="application/ld+json">
-    {
-        "@context": "https://schema.org",
-        "@type": "Event",
-        "name": "Gertrud fyller 75 år - Blossateatern",
-        "description": "Fira med Blossateatern när Gertrud fyller 75 år. Tre besökstider på Teater Blanca i Uppsala. Anmälan via Facebook event.",
-        "startDate": "2025-09-27T15:00:00+02:00",
-        "endDate": "2025-09-28T18:00:00+02:00",
-        "eventSchedule": [
-            {
-                "@type": "Schedule",
-                "startDate": "2025-09-27T15:00:00+02:00",
-                "endDate": "2025-09-27T17:00:00+02:00"
-            },
-            {
-                "@type": "Schedule",
-                "startDate": "2025-09-27T19:00:00+02:00",
-                "endDate": "2025-09-27T21:00:00+02:00"
-            },
-            {
-                "@type": "Schedule",
-                "startDate": "2025-09-28T16:00:00+02:00",
-                "endDate": "2025-09-28T18:00:00+02:00"
-            }
-        ],
-        "eventStatus": "https://schema.org/EventScheduled",
-        "eventAttendanceMode": "https://schema.org/OfflineEventAttendanceMode",
-        "location": {
-            "@type": "Place",
-            "name": "Teater Blanca",
-            "address": {
-                "@type": "PostalAddress",
-                "addressLocality": "Uppsala",
-                "addressCountry": "SE"
-            }
-        },
-        "organizer": {
-            "@type": "Organization",
-            "name": "Blossateatern",
-            "description": "En amatörteatergrupp från Uppsala med en stor passion för scenkonst och gemenskap.",
-            "url": "https://www.facebook.com/events/s/blossateatern-ger-forodelsedag/1525441338814631/"
-        },
-        "performer": {
-            "@type": "Person",
-            "name": "Blossateatern"
-        },
-        "image": "cover.png",
-        "offers": {
-            "@type": "Offer",
-            "price": "120",
-            "priceCurrency": "SEK",
-            "availability": "https://schema.org/InStock",
-            "url": "https://www.facebook.com/events/s/blossateatern-ger-forodelsedag/1525441338814631/"
-        },
-        "isAccessibleForFree": true,
-        "url": "https://www.facebook.com/events/s/blossateatern-ger-forodelsedag/1525441338814631/"
-    }
-    </script>
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://blossateatern.se/">
+    <meta property="og:title" content="BLOSSATEATERN - Amatörteatergrupp från Uppsala">
+    <meta property="og:description" content="Amatörteater med passion för scenkonst och gemenskap.">
+    <meta property="og:image" content="https://blossateatern.se/theater-group.jpeg">
+    <meta property="fb:page_id" content="61580728594316">
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://blossateatern.se/">
+    <meta property="twitter:title" content="BLOSSATEATERN - Amatörteatergrupp från Uppsala">
+    <meta property="twitter:description" content=" Amatörteater med passion för scenkonst och gemenskap.">
+    <meta property="twitter:image" content="https://blossateatern.se/theater-group.jpeg">
+
+    <!-- Schema.org links -->
+    <link rel="canonical" href="https://blossateatern.se/">
+
+    <!-- Facebook verification and links -->
+    <meta property="fb:app_id" content="">
+    <link rel="me" href="https://www.facebook.com/people/Blossateatern/61580728594316/">
+    <link rel="publisher" href="https://www.facebook.com/people/Blossateatern/61580728594316/">
+
+
     <style>
         /* General Styling */
         body {
             font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
             margin: 0;
             padding: 0;
-            background-color: #fdfdfc;
+            background: linear-gradient(135deg, #fdfdfc 0%, #f8f8f8 100%);
             color: #333;
             line-height: 1.6;
         }
@@ -86,6 +52,11 @@
         a {
             color: #85002c;
             text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        a:hover {
+            color: #a50034;
         }
 
         .container {
@@ -97,7 +68,11 @@
         /* Header */
         header {
             text-align: center;
-            padding-top: 40px;
+            padding: 20px 0;
+            background: rgba(255, 255, 255, 0.8);
+            backdrop-filter: blur(10px);
+            border-radius: 20px;
+            margin-bottom: 20px;
         }
 
         .header-content {
@@ -117,14 +92,19 @@
 
         header h1 {
             font-size: 2.8em;
-            color: #85002c; /* A warm, earthy brown */
-            margin: 0;
-            font-weight: normal;
+            color: #85002c;
+            margin: 10px 0;
+            font-weight: 300;
+            letter-spacing: 2px;
+            text-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
         }
 
         header p {
             font-size: 1.2em;
-            color: #555;
+            color: #666;
+            margin: 0;
+            font-style: italic;
+            opacity: 0.9;
         }
 
         /* Invitation Section */
@@ -164,6 +144,33 @@
                 height: 380px;
                 object-fit: cover;
                 object-position: center;
+            }
+
+            /* Make cover images span full width on mobile */
+            div[style*="flex: 0 0 auto"] img[alt*="affisch"] {
+                width: 100% !important;
+                max-width: 100% !important;
+                margin-top: 20px !important;
+            }
+
+            /* Adjust flex layout for mobile */
+            div[style*="display: flex"][style*="gap: 30px"],
+            div[style*="display: flex"][style*="gap: 40px"] {
+                flex-direction: column !important;
+                gap: 20px !important;
+                padding: 20px !important;
+            }
+
+            /* Mobile section padding */
+            #about, #aktuellt, #gallery, #gallery2, #gallery3 {
+                padding: 20px !important;
+                margin: 15px 0 !important;
+            }
+
+            /* Mobile header */
+            header {
+                padding: 20px !important;
+                margin-bottom: 15px !important;
             }
         }
 
@@ -224,35 +231,58 @@
         }
 
         /* About Section */
-        #about {
-            padding: 40px 20px;
+        #about, #aktuellt {
+            padding: 20px 20px;
             /* background-color: #f8f8f8; */
             text-align: center;
             border-radius: 4px;
         }
 
-        #about h2 {
-            font-size: 2.2em;
+        #about h2, #aktuellt h2 {
+            font-size: 2.4em;
             color: #85002c;
-            margin-bottom: 30px;
+            margin-bottom: 15px;
+            font-weight: 300;
+            letter-spacing: 1px;
+        }
+
+        #aktuellt h3 {
+            font-size: 1.6em;
+            color: #85002c;
+            margin: 15px 0 10px 0;
+            font-weight: 400;
         }
 
         #about img {
             max-width: 100%;
-            /* height: auto; */
-            margin-bottom: 20px;
+            margin-bottom: 15px;
+            border-radius: 16px;
+            transition: transform 0.3s ease;
+        }
+
+        #about img:hover {
+            transform: translateY(-5px);
         }
 
         /* Previous Plays Gallery Section */
-        #gallery, #gallery2 {
-            padding: 40px 20px;
+        #gallery, #gallery2, #gallery3 {
+            padding: 20px 40px;
             text-align: center;
         }
 
         .gallery-title {
-            font-size: 2.2em;
+            font-size: 2.4em;
             color: #85002c;
-            margin-bottom: 30px;
+            margin-bottom: 20px;
+            font-weight: 300;
+            letter-spacing: 1px;
+        }
+
+        #gallery h2, #gallery2 h2, #gallery3 h2 {
+            font-size: 2em;
+            color: #85002c;
+            margin: 20px 0 15px 0;
+            font-weight: 400;
         }
 
         .gallery-grid {
@@ -265,14 +295,13 @@
 
         .gallery-item {
             cursor: pointer;
-            border-radius: 8px;
+            border-radius: 16px;
             overflow: hidden;
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            transition: transform 0.3s ease;
         }
 
         .gallery-item:hover {
-            transform: scale(1.05);
-            box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+            transform: translateY(-8px) scale(1.02);
         }
 
         .gallery-item img {
@@ -396,40 +425,22 @@
         </header>
 
         <main>
-            <h2>Aktuellt</h2>
-            <div class="invitation-section">
-                <div class="birthday-card" id="birthdayCard">
-                    <div class="card-inner">
-                        <div class="card-front">
-                            <img src="cover.png" alt="Framsida av inbjudningskort">
-                        </div>
-                    </div>
-                </div>
+            <section id="aktuellt">
 
-                <div class="invitation-text">
-                    <h2>Gertrud fyller 75 år!</h2>
-                    <p>Du är varmt välkommen att fira med henne på <strong> <a href="https://maps.app.goo.gl/TzcQe3HRkLE66Upf6" target="_blank">Teater Blanca</a></strong>!</p>
+                <h3>Håll utkik efter nästa pjäs!</h3>
+                <p>Följ oss på Facebook för att få de senaste uppdateringarna om våra kommande föreställningar och evenemang.</p>
 
-                    <h3>Besökstider:</h3>
-                    <ul style="text-align: left; display: inline-block;">
-                        <!-- <li><strong>27 september 2025 kl. 15:00</strong></li> -->
-                        <li><strong>27 september 2025 kl. 19:00</strong></li>
-                        <li><strong>28 september 2025 kl. 16:00</strong></li>
-                    </ul>
-
-                    <h3>Anmälan:</h3>
-                    <p>
-                        <a href="https://www.facebook.com/events/s/blossateatern-ger-forodelsedag/1525441338814631/"
-                           target="_blank"
-                           rel="noopener noreferrer"
-                           style="color: #85002c; font-weight: bold; text-decoration: none; border: 2px solid #85002c; padding: 10px 20px; border-radius: 5px; display: inline-block; margin-top: 10px; transition: background-color 0.3s ease;"
-                           onmouseover="this.style.backgroundColor='#85002c'; this.style.color='white';"
-                           onmouseout="this.style.backgroundColor='transparent'; this.style.color='#85002c';">
-                           Anmäl dig via Facebook Event
-                        </a>
-                    </p>
-                </div>
-            </div>
+                <p>
+                    <a href="https://www.facebook.com/people/Blossateatern/61580728594316/"
+                       target="_blank"
+                       rel="noopener noreferrer"
+                       style="color: #85002c; font-weight: bold; text-decoration: none; border: 2px solid #85002c; padding: 10px 20px; border-radius: 5px; display: inline-block; margin-top: 10px; transition: background-color 0.3s ease;"
+                       onmouseover="this.style.backgroundColor='#85002c'; this.style.color='white';"
+                       onmouseout="this.style.backgroundColor='transparent'; this.style.color='#85002c';">
+                       Följ oss på Facebook
+                    </a>
+                </p>
+            </section>
 
             <section id="about">
                 <h2>Om Oss</h2>
@@ -437,44 +448,56 @@
                 <p>Blossateatern har varit en aktiv del av Uppsalas kulturliv i fyra år. Vi strävar efter att skapa engagerande och tankeväckande föreställningar för alla åldrar.</p>
             </section>
 
+            <h2 class="gallery-title">Tidigare Föreställningar</h2>
             <section id="gallery">
-                <h2 class="gallery-title">Tidigare Föreställningar</h2>
+                <h2>Förödelsebarnet</h2>
 
-                <h2>Samtal</h2>
-
-                <p>
-                Etables-sur-mer ligger vackert beläget vid atlantkusten i regionen Bretagne i sydvästra Frankrike. Hit har den irländska författaren Melissa och hennes make
-                Nick tagit sin tillflykt under sommaren för att Nick ska vila upp sig och Melissa ska jobba på sin nästa bok. Under en vecka i augusti har
-                Melissa bjudit in litteraturstudenterna Frances och Bobbi.
-                Samtal är ett relationsdrama i två akter som berör alla de faktorer som påverkar relationer människor emellan: makt, status, klass och kärlek.
-                </p>
+                <div style="display: flex; align-items: flex-start; gap: 30px; margin-bottom: 30px; flex-wrap: wrap;">
+                    <div style="flex: 1; min-width: 300px;">
+                        <p>
+                        Det är Gertruds födelsedag och hon ligger i sin säng och oroar sig för allt fasansfullt hon är rädd ska hända under dagen.
+                        Att hon ska träffa sitt barnbarn Henrik som försöker förstå vad som händer med sitt förhållande till Tove som ser allting
+                        som en slump och förklarar det för sin martyriska jobbarkompis Jessica som beklagar sig
+                        inför sin pojkvän Micke som försöker begå självmord genom att dricka kaffe medan han väntar på den ödesbestämda kärleken.
+                        </p>
+                    </div>
+                    <!-- <div style="flex: 0 0 auto;">
+                        <img src="forodelsebarn/cover.jpg" alt="Förödelsebarnet affisch" style="width: 200px; height: auto; border-radius: 8px; box-shadow: 0 4px 15px rgba(0,0,0,0.2); margin-top: -20px;">
+                    </div> -->
+                </div>
 
                 <div class="gallery-grid">
                     <div class="gallery-item" data-gallery="0" data-index="0">
-                        <img src="play1/1.jpeg" alt="Samtal 1">
+                        <img src="forodelsebarn/1.jpg" alt="Förödelsebarnet 1">
                     </div>
                     <div class="gallery-item" data-gallery="0" data-index="1">
-                        <img src="play1/2.jpeg" alt="Samtal 2">
+                        <img src="forodelsebarn/2.jpg" alt="Förödelsebarnet 2">
                     </div>
                     <div class="gallery-item" data-gallery="0" data-index="2">
-                        <img src="play1/3.jpeg" alt="Samtal 3">
+                        <img src="forodelsebarn/3.jpg" alt="Förödelsebarnet 3">
                     </div>
-                    <!-- <div class="gallery-item" data-gallery="0" data-index="3">
-                        <img src="play1/4.jpeg" alt="Föreställning 4">
-                    </div> -->
+                    <div class="gallery-item" data-gallery="0" data-index="3">
+                        <img src="forodelsebarn/4.jpg" alt="Förödelsebarnet 4">
+                    </div>
                     <div class="gallery-item" data-gallery="0" data-index="4">
-                        <img src="play1/5.jpeg" alt="Samtal 5">
+                        <img src="forodelsebarn/5.jpg" alt="Förödelsebarnet 5">
                     </div>
                     <div class="gallery-item" data-gallery="0" data-index="5">
-                        <img src="play1/6.jpeg" alt="Samtal 6">
+                        <img src="forodelsebarn/6.jpg" alt="Förödelsebarnet 6">
                     </div>
                     <div class="gallery-item" data-gallery="0" data-index="6">
-                        <img src="play1/7.jpeg" alt="Samtal 7">
+                        <img src="forodelsebarn/7.jpg" alt="Förödelsebarnet 7">
+                    </div>
+                    <div class="gallery-item" data-gallery="0" data-index="7">
+                        <img src="forodelsebarn/8.jpg" alt="Förödelsebarnet 8">
+                    </div>
+                    <div class="gallery-item" data-gallery="0" data-index="8">
+                        <img src="forodelsebarn/9.jpg" alt="Förödelsebarnet 9">
                     </div>
                 </div>
             </section>
 
-            <section id="gallery2">
+            <section id="gallery3">
                 <h2>Påsk</h2>
 
                 <p>
@@ -488,23 +511,58 @@
                 </p>
 
                 <div class="gallery-grid">
-                    <div class="gallery-item" data-gallery="1" data-index="0">
+                    <div class="gallery-item" data-gallery="2" data-index="0">
                         <img src="play2/1.jpeg" alt="Påsk 1">
                     </div>
-                    <div class="gallery-item" data-gallery="1" data-index="1">
+                    <div class="gallery-item" data-gallery="2" data-index="1">
                         <img src="play2/2.jpeg" alt="Påsk 2">
                     </div>
-                    <div class="gallery-item" data-gallery="1" data-index="2">
+                    <div class="gallery-item" data-gallery="2" data-index="2">
                         <img src="play2/3.jpeg" alt="Påsk 3">
                     </div>
-                    <div class="gallery-item" data-gallery="1" data-index="3">
+                    <div class="gallery-item" data-gallery="2" data-index="3">
                         <img src="play2/4.jpeg" alt="Påsk 4">
                     </div>
-                    <div class="gallery-item" data-gallery="1" data-index="4">
+                    <div class="gallery-item" data-gallery="2" data-index="4">
                         <img src="play2/5.jpeg" alt="Påsk 5">
                     </div>
-                    <div class="gallery-item" data-gallery="1" data-index="5">
+                    <div class="gallery-item" data-gallery="2" data-index="5">
                         <img src="play2/6.jpeg" alt="Påsk 6">
+                    </div>
+                </div>
+            </section>
+
+             <section id="gallery2">
+                <h2>Samtal</h2>
+
+                <p>
+                Etables-sur-mer ligger vackert beläget vid atlantkusten i regionen Bretagne i sydvästra Frankrike. Hit har den irländska författaren Melissa och hennes make
+                Nick tagit sin tillflykt under sommaren för att Nick ska vila upp sig och Melissa ska jobba på sin nästa bok. Under en vecka i augusti har
+                Melissa bjudit in litteraturstudenterna Frances och Bobbi.
+                Samtal är ett relationsdrama i två akter som berör alla de faktorer som påverkar relationer människor emellan: makt, status, klass och kärlek.
+                </p>
+
+                <div class="gallery-grid">
+                    <div class="gallery-item" data-gallery="1" data-index="0">
+                        <img src="play1/1.jpeg" alt="Samtal 1">
+                    </div>
+                    <div class="gallery-item" data-gallery="1" data-index="1">
+                        <img src="play1/2.jpeg" alt="Samtal 2">
+                    </div>
+                    <div class="gallery-item" data-gallery="1" data-index="2">
+                        <img src="play1/3.jpeg" alt="Samtal 3">
+                    </div>
+                    <!-- <div class="gallery-item" data-gallery="1" data-index="3">
+                        <img src="play1/4.jpeg" alt="Föreställning 4">
+                    </div> -->
+                    <div class="gallery-item" data-gallery="1" data-index="4">
+                        <img src="play1/5.jpeg" alt="Samtal 5">
+                    </div>
+                    <div class="gallery-item" data-gallery="1" data-index="5">
+                        <img src="play1/6.jpeg" alt="Samtal 6">
+                    </div>
+                    <div class="gallery-item" data-gallery="1" data-index="6">
+                        <img src="play1/7.jpeg" alt="Samtal 7">
                     </div>
                 </div>
             </section>
@@ -532,10 +590,20 @@
         // Gallery functionality
         const galleries = [
             [
+                'forodelsebarn/1.jpg',
+                'forodelsebarn/2.jpg',
+                'forodelsebarn/3.jpg',
+                'forodelsebarn/4.jpg',
+                'forodelsebarn/5.jpg',
+                'forodelsebarn/6.jpg',
+                'forodelsebarn/7.jpg',
+                'forodelsebarn/8.jpg',
+                'forodelsebarn/9.jpg'
+            ],
+            [
                 'play1/1.jpeg',
                 'play1/2.jpeg',
                 'play1/3.jpeg',
-                // 'play1/4.jpeg',
                 'play1/5.jpeg',
                 'play1/6.jpeg',
                 'play1/7.jpeg'
@@ -556,7 +624,7 @@
         // Touch/swipe variables for mobile
         let touchStartX = 0;
         let touchEndX = 0;
-        const minSwipeDistance = 50; // Minimum distance for a swipe to register
+        const minSwipeDistance = 50;
 
         // Gallery elements
         const galleryItems = document.querySelectorAll('.gallery-item');
@@ -630,17 +698,15 @@
             const swipeDistance = touchEndX - touchStartX;
 
             if (Math.abs(swipeDistance) < minSwipeDistance) {
-                return; // Not a significant swipe
+                return;
             }
 
             const currentGalleryImages = galleries[currentGallery];
 
             if (swipeDistance > 0) {
-                // Swipe right - go to previous image
                 currentImageIndex = (currentImageIndex - 1 + currentGalleryImages.length) % currentGalleryImages.length;
                 showImage(currentImageIndex);
             } else {
-                // Swipe left - go to next image
                 currentImageIndex = (currentImageIndex + 1) % currentGalleryImages.length;
                 showImage(currentImageIndex);
             }
@@ -650,10 +716,12 @@
             const currentGalleryImages = galleries[currentGallery];
             lightboxImage.src = currentGalleryImages[index];
             lightboxImage.alt = `Föreställning ${index + 1}`;
+            document.body.style.overflow = 'hidden';
         }
 
         function closeLightbox() {
             lightbox.classList.remove('active');
+            document.body.style.overflow = '';
         }
     </script>
 
