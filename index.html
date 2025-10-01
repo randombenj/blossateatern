@@ -63,7 +63,6 @@
             max-width: 900px;
             margin: 0 auto;
             padding: 20px;
-            backdrop-filter: blur(10px);
         }
 
         /* Header */
@@ -605,7 +604,6 @@
                 'play1/1.jpeg',
                 'play1/2.jpeg',
                 'play1/3.jpeg',
-                // 'play1/4.jpeg',
                 'play1/5.jpeg',
                 'play1/6.jpeg',
                 'play1/7.jpeg'
@@ -626,7 +624,7 @@
         // Touch/swipe variables for mobile
         let touchStartX = 0;
         let touchEndX = 0;
-        const minSwipeDistance = 50; // Minimum distance for a swipe to register
+        const minSwipeDistance = 50;
 
         // Gallery elements
         const galleryItems = document.querySelectorAll('.gallery-item');
@@ -700,17 +698,15 @@
             const swipeDistance = touchEndX - touchStartX;
 
             if (Math.abs(swipeDistance) < minSwipeDistance) {
-                return; // Not a significant swipe
+                return;
             }
 
             const currentGalleryImages = galleries[currentGallery];
 
             if (swipeDistance > 0) {
-                // Swipe right - go to previous image
                 currentImageIndex = (currentImageIndex - 1 + currentGalleryImages.length) % currentGalleryImages.length;
                 showImage(currentImageIndex);
             } else {
-                // Swipe left - go to next image
                 currentImageIndex = (currentImageIndex + 1) % currentGalleryImages.length;
                 showImage(currentImageIndex);
             }
@@ -720,10 +716,12 @@
             const currentGalleryImages = galleries[currentGallery];
             lightboxImage.src = currentGalleryImages[index];
             lightboxImage.alt = `Föreställning ${index + 1}`;
+            document.body.style.overflow = 'hidden';
         }
 
         function closeLightbox() {
             lightbox.classList.remove('active');
+            document.body.style.overflow = '';
         }
     </script>
 
